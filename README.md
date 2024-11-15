@@ -1,5 +1,3 @@
-# RAG
-
 ## Unlock the Future of Exam Preparation with the RAG Chatbot!
 
 Imagine having a personal study assistant that not only reads your notes but summarizes entire chapters, crafts exam-ready questions, and delivers precise answers to even the trickiest queries—all tailored to your syllabus.
@@ -24,5 +22,5 @@ Ready to change the way you learn? Dive in and discover the future of academic e
 
 Watch the demo video below to see how the RAG Chatbot works in action:
 
-[![Watch the demo]](RAG/rag_demo.mp4)
+[[Watch the demo]](RAG/rag_demo.mp4)
 
