@@ -24,5 +24,5 @@ Ready to change the way you learn? Dive in and discover the future of academic e
 
 Watch the demo video below to see how the RAG Chatbot works in action:
 
-[![Watch the demo]](RAG/rag-demo.mp4)
+[![Watch the demo]](RAG/rag_demo.mp4)
 
