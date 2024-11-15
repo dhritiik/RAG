@@ -9,3 +9,4 @@ Personalized Learning: Adapts responses to users' specific academic needs.
 User-Friendly Interface: Intuitive design for seamless interaction.
 
 #How does is work:
+![Alt Text](/Users/dhritikothari/Desktop/RAG/rag-diagram.png)
