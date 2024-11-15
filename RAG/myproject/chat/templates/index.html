@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chat with PDFs</title>
+</head>
+<body>
+    <h1>Upload your PDFs and chat</h1>
+    
+    <!-- PDF Upload Form -->
+    <form id="upload-form" method="POST" enctype="multipart/form-data" action="{% url 'process_pdfs' %}">
+        {% csrf_token %}
+        <input type="file" name="pdfs" multiple>
+        <button type="submit">Process PDFs</button>
+    </form>
+    
+    <!-- Chat Form -->
+    <form id="chat-form" method="POST">
+        {% csrf_token %}
+        <input type="text" name="question" placeholder="Ask a question">
+        <button type="submit">Ask</button>
+    </form>
+    
+    <!-- Chat History -->
+    <div id="chat-history">
+        <!-- Chat history will be displayed here -->
+    </div>
+
+    <script>
+        // Handle PDF upload
+        document.getElementById('upload-form').onsubmit = async function(e) {
+            e.preventDefault();
+            let formData = new FormData(this);
+            const response = await fetch("{% url 'process_pdfs' %}", {
+                method: 'POST',
+                body: formData,
+            });
+            const data = await response.json();
+            if (data.status === 'success') {
+                alert('PDFs processed successfully');
+            } else {
+                alert('Failed to process PDFs');
+            }
+        };
+
+        // Handle chat
+        document.getElementById('chat-form').onsubmit = async function(e) {
+            e.preventDefault();
+            const question = this.question.value;
+            const response = await fetch("{% url 'ask_question' %}", {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                    'X-CSRFToken': '{{ csrf_token }}'
+                },
+                body: JSON.stringify({question: question})
+            });
+            const data = await response.json();
+            const chatHistory = data.chat_history;
+            document.getElementById('chat-history').innerHTML = chatHistory.map((msg) => `<p>${msg}</p>`).join('');
+        };
+    </script>
+</body>
+</html>
