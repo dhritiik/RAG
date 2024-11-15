@@ -1,6 +1,12 @@
 # RAG
 
-Retrieval-Augmented Generation (RAG) Chatbot is an AI-powered application designed to assist students in their exam preparation. Leveraging advanced Natural Language Processing (NLP) techniques, the chatbot provides personalized, contextually relevant answers, chapter-wise summaries, and curated questions for efficient study.
+## Unlock the Future of Exam Preparation with the RAG Chatbot!
+
+Imagine having a personal study assistant that not only reads your notes but summarizes entire chapters, crafts exam-ready questions, and delivers precise answers to even the trickiest queries—all tailored to your syllabus.
+
+The **Retrieval-Augmented Generation (RAG) Chatbot** is a revolutionary AI-powered companion designed for Mumbai University students. It transforms hours of tedious studying into a seamless, interactive experience. Whether you’re cramming for an exam or building long-term understanding, this chatbot ensures you’re always a step ahead with smarter, faster, and more personalized preparation.
+
+Ready to change the way you learn? Dive in and discover the future of academic excellence. 🚀
 
 ## Features
 
@@ -13,3 +19,10 @@ Retrieval-Augmented Generation (RAG) Chatbot is an AI-powered application design
 ## How Does It Work
 
 ![RAG Workflow Diagram](RAG/rag-diagram.png)
+
+## Demo
+
+Watch the demo video below to see how the RAG Chatbot works in action:
+
+[![Watch the demo]](RAG/rag-demo.mp4)
+
